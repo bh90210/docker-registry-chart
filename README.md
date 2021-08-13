@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="26%" src="https://user-images.githubusercontent.com/22690219/128983505-53c4e512-df90-451b-b903-1074b0d44373.png" />
+  <img width="26%" src="https://user-images.githubusercontent.com/22690219/129286274-7ccbe256-b0ea-42d9-83b0-9f047b2386a3.png" />
 </p>
 
 # Docker Registry Helm Chart
