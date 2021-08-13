@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  docker-registry-chart:
+  - apiVersion: v2
+    appVersion: 2.7.1
+    created: "2021-08-13T03:43:55.421619396+03:00"
+    description: A Helm chart for Docker Registry
+    digest: 63214948f15aff542540966e75b511721441b9d7185d3c96b456324612b044cc
+    name: docker-registry-chart
+    type: application
+    urls:
+    - https://github.com/bh90210/docker-registry-chart/releases/download/docker-registry-chart-0.1.0/docker-registry-chart-0.1.0.tgz
+    version: 0.1.0
+generated: "2021-08-13T03:43:55.421625387+03:00"
