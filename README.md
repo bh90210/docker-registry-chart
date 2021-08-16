@@ -2,9 +2,32 @@
   <img width="26%" src="https://user-images.githubusercontent.com/22690219/129286274-7ccbe256-b0ea-42d9-83b0-9f047b2386a3.png" />
 </p>
 
+Forked from the [original charts repo](https://github.com/helm/charts/tree/master/stable/docker-registry).
+
 # Docker Registry Helm Chart
 
-This directory contains a Kubernetes chart to deploy a private Docker Registry.
+This repo contains a Kubernetes chart to deploy a private Docker Registry.
+
+## Quick Usage
+
+[Helm](https://helm.sh) must be installed to use the charts.  Please refer to
+Helm's [documentation](https://helm.sh/docs) to get started.
+
+Once Helm has been set up correctly, add the repo as follows:
+
+  	helm repo add docker-registry https://bh90210.github.io/docker-registry-chart
+
+If you had already added this repo earlier, run `helm repo update` to retrieve
+the latest versions of the packages.  You can then run `helm search repo
+docker-registry` to see the charts.
+
+To install the <chart-name> chart:
+
+    helm install docker-registry docker-registry/docker-registry
+
+To uninstall the chart:
+
+    helm delete docker-registry
 
 ## Prerequisites Details
 
@@ -16,12 +39,12 @@ This chart will do the following:
 
 * Implement a Docker registry deployment
 
-## Installing the Chart
+## Installing the Chart with custom values
 
 To install the chart, use the following:
 
 ```console
-$ helm install stable/docker-registry
+$ helm install docker-registry docker-registry/docker-registry -f values.yaml
 ```
 
 ## Configuration
@@ -45,7 +68,7 @@ their default values.
 | `service.type`              | service type                                                                               | `ClusterIP`     |
 | `service.clusterIP`         | if `service.type` is `ClusterIP` and this is non-empty, sets the cluster IP of the service | `nil`           |
 | `service.nodePort`          | if `service.type` is `NodePort` and this is non-empty, sets the node port of the service   | `nil`           |
-| `service.loadBalancerIP     | if `service.type` is `LoadBalancer` and this is non-empty, sets the loadBalancerIP of the service | `nil`          |
+| `service.loadBalancerIP`     | if `service.type` is `LoadBalancer` and this is non-empty, sets the loadBalancerIP of the service | `nil`          |
 | `service.loadBalancerSourceRanges`| if `service.type` is `LoadBalancer` and this is non-empty, sets the loadBalancerSourceRanges of the service | `nil`           |
 | `replicaCount`              | k8s replicas                                                                               | `1`             |
 | `updateStrategy`            | update strategy for deployment                                                             | `{}`            |

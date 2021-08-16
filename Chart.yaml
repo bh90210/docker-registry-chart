@@ -1,6 +1,0 @@
-apiVersion: v2
-name: docker-registry-chart
-description: A Helm chart for Docker Registry
-type: application
-version: 0.1.0
-appVersion: "2.7.1"
