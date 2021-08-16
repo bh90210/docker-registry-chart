@@ -4,7 +4,6 @@
 
 [![Release Charts](https://github.com/bh90210/docker-registry-chart/actions/workflows/release.yml/badge.svg)](https://github.com/bh90210/docker-registry-chart/actions/workflows/release.yml)
 
-
 Forked from the [original charts repo](https://github.com/helm/charts/tree/master/stable/docker-registry).
 
 # Docker Registry Helm Chart

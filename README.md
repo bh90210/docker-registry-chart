@@ -2,6 +2,9 @@
   <img width="26%" src="https://user-images.githubusercontent.com/22690219/129286274-7ccbe256-b0ea-42d9-83b0-9f047b2386a3.png" />
 </p>
 
+[![Release Charts](https://github.com/bh90210/docker-registry-chart/actions/workflows/release.yml/badge.svg)](https://github.com/bh90210/docker-registry-chart/actions/workflows/release.yml)
+
+
 Forked from the [original charts repo](https://github.com/helm/charts/tree/master/stable/docker-registry).
 
 # Docker Registry Helm Chart
