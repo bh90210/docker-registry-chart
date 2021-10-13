@@ -3,6 +3,20 @@ entries:
   docker-registry:
   - apiVersion: v2
     appVersion: 2.7.1
+    created: "2021-10-13T19:13:35.437874802Z"
+    description: A Helm chart for Docker Registry
+    digest: af0b6e32d797cf84eb88c67cc835d2366afa4eae2a80d19e0c049fdd3a3ff982
+    home: https://hub.docker.com/_/registry/
+    icon: https://hub.docker.com/public/images/logos/mini-logo.svg
+    name: docker-registry
+    sources:
+    - https://github.com/docker/distribution-library-image
+    type: application
+    urls:
+    - https://github.com/bh90210/docker-registry-chart/releases/download/docker-registry-0.2.0/docker-registry-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: 2.7.1
     created: "2021-08-16T04:58:08.040158855Z"
     description: A Helm chart for Docker Registry
     digest: cb2cad6a0a6c5e5e3b674a37c22bd9e798a629b17f18d302692e6831c24220b1
