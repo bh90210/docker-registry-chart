@@ -46,7 +46,7 @@ This chart will do the following:
 
 To install the chart, use the following:
 
-```console
+```
 helm install docker-registry docker-registry/docker-registry -f values.yaml
 ```
 
