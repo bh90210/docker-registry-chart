@@ -26,11 +26,11 @@ docker-registry` to see the charts.
 
 To install the <chart-name> chart:
 
-    helm install docker-registry docker-registry/docker-registry
+    helm install docker-registry docker-registry/docker-registry --create-namespace -n docker-registry
 
 To uninstall the chart:
 
-    helm delete docker-registry
+    helm delete docker-registry -n docker-registry
 
 ## Prerequisites Details
 
