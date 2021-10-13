@@ -26,11 +26,11 @@ docker-registry` to see the charts.
 
 To install the <chart-name> chart:
 
-    helm install docker-registry docker-registry/docker-registry
+    helm install docker-registry docker-registry/docker-registry --create-namespace -n docker-registry
 
 To uninstall the chart:
 
-    helm delete docker-registry
+    helm delete docker-registry -n docker-registry
 
 ## Prerequisites Details
 
@@ -46,8 +46,30 @@ This chart will do the following:
 
 To install the chart, use the following:
 
+```
+helm install docker-registry docker-registry/docker-registry --create-namespace -n docker-registry -f values.yaml
+```
+
+## Creating a user login
+
+First create a user password key pair.
 ```console
-helm install docker-registry docker-registry/docker-registry -f values.yaml
+docker run --entrypoint htpasswd registry:2.7.0 -Bbn username password > ./htpasswd
+```
+_Replace `username` with an actual username._
+
+Then edit the `values.yaml` like so:
+
+```yaml
+secrets:
+  haSharedSecret: ""
+  htpasswd: |-
+      user:<your password hash>
+```
+
+To create the hash simply grab the password portion inside the `htpasswd` file created in the previous step and run 
+```
+echo $2y$05$qee9BI3FovJ9/j.HWEbGu7m8nfUzXm0dG7UkxsmEEmMJ00iDPS/u | base64
 ```
 
 ## Configuration
